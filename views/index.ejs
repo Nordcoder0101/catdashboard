@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>All the cats!</h1>
+  <% for (let i in data.allCats){ %>
+    <a href="/cats/<%= data.allCats[i]._id %>" <h3>Name: <%= data.allCats[i].name %></h3></a><br>
+    <a href="/cats/edit/<%= data.allCats[i]._id %>">Edit this cat</a><br>
+    <a href="/cats/destroy/<%= data.allCats[i]._id %>">Delete this cat</a>
+    <hr>
+  <% } %>
+  <a href="/new"><h4>Add New Cat</h4></a>
+</body>
+</html>
